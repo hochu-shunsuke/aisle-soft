@@ -10,16 +10,6 @@
   margin: 0 auto;
 }
 
-/* アクセスタイトル */
-.access-title {
-  font-size: var(--font-size-xl, 1.5rem);
-  font-weight: bold;
-  color: var(--color-black, #333);
-  margin-bottom: var(--spacing-xl, 40px);
-  text-align: center;
-  line-height: 1.4;
-}
-
 /* 校舎とマップのコンテナ */
 .access-visual {
   display: flex;

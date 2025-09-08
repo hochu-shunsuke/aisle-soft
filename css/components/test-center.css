@@ -1,0 +1,136 @@
+.test-center {
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--color-shadow-base);
+  padding: var(--spacing-xl);
+}
+
+/* パンくずリストのスタイル */
+.test-center__breadcrumb {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+.test-center__breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.test-center__breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.test-center__breadcrumb-link img {
+  height: 12px;
+  margin: 0 var(--spacing-xs);
+}
+
+/* タイトルとサブタイトルのスタイル */
+.test-center__title {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+.test-center__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-text);
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.test-center__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+}
+
+/* 試験リストのスタイル */
+.test-center__list-item {
+  margin-bottom: var(--spacing-md);
+}
+
+/* 各試験名のスタイル */
+.test-center__list-item-name {
+  display: inline;
+  background: rgba(40, 96, 160, 0.1);
+  color: var(--color-primary, #2860A0);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--spacing-xs, 4px) var(--spacing-sm, 8px);
+  border-radius: 16px;
+  margin-bottom: var(--spacing-sm, 8px);
+  width: auto;
+  max-width: fit-content;
+}
+
+/* 試験説明文のスタイル */
+.test-center__list-item-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* CTA（リンク）のスタイル */
+.test-center__list-cta {
+  margin-top: var(--spacing-lg);
+  text-align: left;
+}
+
+.test-center__list-cta-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.test-center__list-cta-button {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: var(--font-size-sm);
+}
+
+.test-center__list-cta-button:hover {
+  text-decoration: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .l-section__container {
+    padding: 0 var(--spacing-md);
+  }
+  .test-center {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .l-section__container {
+    padding: 0 var(--spacing-sm);
+  }
+  .test-center {
+    padding: var(--spacing-md);
+  }
+
+  .test-center__title {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .test-center__list-item {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .test-center__list-item-name {
+    font-size: var(--font-size-sm);
+  }
+}
