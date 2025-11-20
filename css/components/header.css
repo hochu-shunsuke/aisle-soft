@@ -28,7 +28,7 @@
   --font-size-lg: 1.25rem;
 
   /* その他のプロパティを定義 */
-  --header-height-desktop: 80px;
+  --header-height-desktop: 56px;
   --header-height-mobile: 60px;
   --header-logo-height-desktop: 30px;
   --header-logo-height-mobile: 30px;
@@ -36,6 +36,7 @@
   /* ヘッダーデザイン用変数 */
   --header-float-gap: 20px; /* デスクトップで上端からどれくらい空けるか */
   --header-radius: 24px;    /* 角丸のサイズ */
+
 }
 
 /* ==============================================
@@ -55,6 +56,7 @@
   
   /* 横の透過部分をクリック可能（下の要素にアクセス可能）にするための設定 */
   pointer-events: none; 
+
 }
 
 /* ==============================================
@@ -111,6 +113,7 @@
 
 .header__nav {
   /* 右端寄せのため margin-left: auto でも可だが、justify-content: space-between があるので不要 */
+
 }
 
 .header__nav-list {
