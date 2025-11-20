@@ -1,52 +1,48 @@
-// ヒーローのスライドショー機能
+// hero.js
 function initializeHero() {
   const hero = document.getElementById('hero-section');
+  if (!hero) return;
+
   const bgElements = hero.querySelectorAll('.hero__bg');
   const indicators = hero.querySelectorAll('.hero__indicator');
   
-  if (!hero || bgElements.length === 0) return;
+  if (bgElements.length === 0) return;
   
   let currentIndex = 0;
+  let slideInterval;
   
-  // インジケーターのクリックイベント
+  function updateSlide(index) {
+    bgElements.forEach((bg, i) => {
+      bg.classList.toggle('active', i === index);
+    });
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+  }
+
   indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
-      currentIndex = index;
-      updateSlide();
+      updateSlide(index);
+      resetInterval();
     });
   });
   
-  // 自動スライドショー
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % bgElements.length;
-    updateSlide();
-  }, 5000);
-  
-  function updateSlide() {
-    bgElements.forEach((bg, index) => {
-      bg.classList.toggle('active', index === currentIndex);
-    });
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle('active', index === currentIndex);
-    });
+  function startInterval() {
+    // ここが5000(5秒)なら、アニメーション(40秒)の冒頭部分だけを使って
+    // ゆっくり拡大しながら次の画像へクロスフェードします。
+    slideInterval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % bgElements.length;
+      updateSlide(nextIndex);
+    }, 3000);
   }
-  
-  // 高さ設定（最初の画像から取得）
-  const firstBg = bgElements[0];
-  const bgImageUrl = firstBg.style.backgroundImage.slice(5, -2); // url("...") から ... を抽出
-  
-  const img = new Image();
-  img.onload = () => {
-    const width = window.innerWidth <= 768 ? window.innerWidth : hero.offsetWidth;
-    hero.style.height = `${width * (img.height / img.width)}px`;
-  };
-  img.src = bgImageUrl;
-  
-  // リサイズ対応
-  window.addEventListener('resize', () => {
-    const width = window.innerWidth <= 768 ? window.innerWidth : hero.offsetWidth;
-    hero.style.height = `${width * (img.height / img.width)}px`;
-  });
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    startInterval();
+  }
+
+  startInterval();
 }
 
 document.addEventListener('DOMContentLoaded', initializeHero);
