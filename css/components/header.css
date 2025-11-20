@@ -26,17 +26,33 @@
   --font-size-lg: 1.25rem;
 
   /* その他のプロパティを定義 */
-  --header-height-desktop: 80px;
+  --header-height-desktop: 56px;
   --header-height-mobile: 60px;
-  --header-logo-height-desktop: 48px;
+  --header-logo-height-desktop: 32px;
   --header-logo-height-mobile: 40px;
   --border-radius-sm: 4px;
 }
 
 .header {
   background: var(--color-white);
-  width: 100%;
-  box-shadow: 0 2px 8px var(--color-shadow-base);
+  width: 80%;
+  margin: 16px auto 0 auto;
+  box-shadow: 0 4px 16px var(--color-shadow-base), 0 2px 8px var(--color-shadow-primary);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 1000;
+  border-radius: 16px;
+@media (max-width: 999px) {
+  .header {
+    width: 100%;
+    left: 0;
+    transform: none;
+    position: static;
+    margin: 0;
+  }
+}
 }
 
 .header__container {
@@ -81,7 +97,8 @@
 .header__nav {
   position: absolute;
   right: 32px;
-  top: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .header__nav-list {
