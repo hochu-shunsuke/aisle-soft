@@ -5,15 +5,13 @@
   padding: 0;
 }
 
-/* 【変更点】カードのコンテナをFlexboxに変更し、中央寄せを適用。
-   grid-template-columnsの代わりに flex-wrap と width を使用。
-*/
+/* 【中央寄せ】カードのコンテナをFlexboxに変更し、中央寄せを適用。*/
 .contract-cards {
-  display: flex; /* Flexboxに変更 */
-  flex-wrap: wrap; /* 折り返しを有効にする */
+  display: flex; 
+  flex-wrap: wrap; 
   justify-content: center; /* 【最重要】カード全体を中央に寄せる */
   
-  gap: var(--spacing-xl, 40px); /* ギャップはFlexboxでも使用 */
+  gap: var(--spacing-xl, 40px);
   padding-top: var(--spacing-xl, 40px);
 }
 
@@ -30,10 +28,9 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%; 
   
-  /* 【変更点】3列表示のための幅を計算 */
-  /* (100% / 3) からギャップの 40px の約2/3を引くことで、きれいに3列が並びます */
+  /* 3列表示のための幅を計算 */
   width: calc(33.33% - 27px); 
-  min-width: 250px; /* カードが小さくなりすぎないための下限 */
+  min-width: 250px; 
 }
 
 .contract-card:hover {
@@ -88,25 +85,22 @@
    ======================== */
 
 @media (max-width: 1000px) {
-  /* 3列を維持しつつギャップを調整 */
   .contract-cards {
     gap: var(--spacing-lg, 24px);
   }
   .contract-card {
-      /* ギャップ 24px に合わせて幅を調整 */
       width: calc(33.33% - 16px); 
       min-width: 200px;
   }
 }
 
 @media (max-width: 900px) {
-  /* 【変更点】2列に切り替え */
+  /* 2列に切り替え */
   .contract-cards {
     gap: 24px;
     padding-top: var(--spacing-lg, 24px);
   }
   .contract-card {
-      /* 2列表示のための幅を計算 (50%からギャップの半分を引く) */
       width: calc(50% - 12px); 
   }
 }
@@ -116,7 +110,7 @@
     gap: var(--spacing-lg, 24px);
   }
   .contract-card {
-    /* 【変更点】1列表示 */
+    /* 1列表示 */
     width: 100%; 
     min-width: 0;
     padding: 24px 16px 18px 16px;

@@ -34,53 +34,30 @@
 
 .image-grid__image {
   width: 100%;
-  height: 280px;
+  /* 【修正】デフォルトの高さを280pxから240pxに縮小しました */
+  height: 240px; 
   object-fit: contain;
   display: block;
 }
 
 /* サイズバリエーション */
 .image-grid--small .image-grid__image {
-  height: 200px;
+  height: 180px; 
 }
 
 .image-grid--large .image-grid__image {
-  height: 320px;
+  height: 300px;
 }
 
-/* タブレット対応 */
+/* タブレット対応 (1024px以下) */
 @media (max-width: 1024px) {
   .image-grid {
     gap: var(--spacing-md, 16px);
   }
   
   .image-grid__image {
-    height: 240px;
-  }
-  
-  .image-grid--small .image-grid__image {
-    height: 180px;
-  }
-  
-  .image-grid--large .image-grid__image {
-    height: 280px;
-  }
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .image-grid--2x1,
-  .image-grid--2x2,
-  .image-grid--3x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .image-grid {
-    gap: var(--spacing-sm, 8px);
-  }
-  
-  .image-grid__image {
-    height: 180px;
+    /* 【修正】タブレットでの高さを240pxから200pxに縮小しました */
+    height: 200px;
   }
   
   .image-grid--small .image-grid__image {
@@ -88,32 +65,41 @@
   }
   
   .image-grid--large .image-grid__image {
-    height: 200px;
-  }
-  
-  .image-grid__caption {
-    padding: var(--spacing-sm, 8px);
-    font-size: 0.75rem;
+    height: 260px;
   }
 }
 
-/* 極小スマホ対応 */
+/* スマホ対応 (768px以下) */
+@media (max-width: 768px) {
+  .image-grid--2x1,
+  .image-grid--2x2,
+  .image-grid--3x2 {
+    /* 2列表示を維持 */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .image-grid__image {
+    /* 【追加】スマホでの高さをさらに縮小 */
+    height: 140px;
+  }
+  
+  .image-grid--small .image-grid__image {
+    height: 120px;
+  }
+  
+  .image-grid--large .image-grid__image {
+    height: 180px;
+  }
+}
+
+/* スマホ対応（480px以下で1列にする場合の想定） */
 @media (max-width: 480px) {
   .image-grid--2x1,
   .image-grid--2x2,
   .image-grid--3x2 {
     grid-template-columns: 1fr;
   }
-  
   .image-grid__image {
-    height: 220px;
-  }
-  
-  .image-grid--small .image-grid__image {
     height: 180px;
-  }
-  
-  .image-grid--large .image-grid__image {
-    height: 260px;
   }
 }
