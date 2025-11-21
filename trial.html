@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/form.css">
     <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/components/company.css">
 </head>
 <body>
     <div class="l-site">
@@ -23,7 +24,7 @@
                 <nav class="header__nav" aria-label="メインナビゲーション">
                     <ul class="header__nav-list">
                         <li><a class="header__nav-link" href="company.html">企業情報</a></li>
-                        <li><a class="header__nav-link" href="course.html">製品紹介</a></li>
+                        <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
                         <li><a class="header__nav-link" href="trial.html">人材募集</a></li>
                         <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
                     </ul>
@@ -37,7 +38,7 @@
             <div class="header__nav-menu">
                 <ul class="header__nav-list">
                     <li><a class="header__nav-link" href="company.html">企業情報</a></li>
-                    <li><a class="header__nav-link" href="course.html">製品紹介</a></li>
+                    <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
                     <li><a class="header__nav-link" href="trial.html">人材募集</a></li>
                     <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
                 </ul>
@@ -50,22 +51,55 @@
             <section class="l-section">
                 <div class="l-section__container">
 
-                    <h1 class="section-title">無料体験のご案内</h1>
+                    <h1 class="section-title">人材募集</h1>
                     <p class="section-detail">
-                        アイルソフトでは、随時無料体験を実施しています。<span class="pc-break"></span>
-                        少しでも気になった方はぜひ無料体験にお越しください。無料体験では質問や相談も受け付けております。<span class="pc-break"></span>
-                        どのコースか迷われている方は、お子様やご自分に合ったコースを提案させていただきます。あなたのペースに合った学びを見つけてください。<span class="pc-break"></span>
-                        お申し込みは電話もしくは申込フォームから受け付けております。お会いできる日を楽しみにいています！
+                        アイルソフトではやる気と向上心にあふれた人を募集中です.一緒に働きませんか？<span class="pc-break"></span>
+                        新卒中途は問いません。経験がなくてもやる気があればきっとできます。お待ちしております。<span class="pc-break"></span>
+                        雇用形態は下記以外にも相談に応じます。楽しく会社を一緒に創っていきましょう。<span class="pc-break"></span>
                     </p>
 
+                    <div class="company-section">
+                        <ul class="company-info">
+                            <li class="company-item">
+                                <span class="company-label">採用職種</span>
+                                <span class="company-value">プログラマ、システムエンジニア、アプリ経験者、WEBプログラマ、WEBデザイナ</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">雇用形態</span>
+                                <span class="company-value">正社員（3ヶ月～6ヶ月の試用期間有）／派遣社員／契約社員／パート<br>
+                                    給与・交通費：当社規定による<br>
+                                    勤務地：当事務所、名古屋市、愛知県、岐阜県、三重県を中心とした各地</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">休日</span>
+                                <span class="company-value">年末年始／GW／夏季休暇／有給休暇あり</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">福利厚生</span>
+                                <span class="company-value">中社会保険／雇用保険／労災保険／雇用保険／休業補償／退職金積立（試用期間後）</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">採用方法</span>
+                                <span class="company-value">お問い合わせ：下記フォーム／電話／メール<br>
+                                    審査：書類審査、筆記試験、面接の上、選考結果をご連絡します。<br>
+                                    募集人員：数名<br>
+                                    募集時期：随時</span>
+                            </li>
+                        </ul>
+                    </div>
+
                     <form class="form-section">
-                        <h3 class="form-title">お申し込みフォーム</h3>
+                        <h3 class="form-title">ご応募フォーム</h3>
                         
                         <div class="form-group">
                             <label class="form-label">
                                 <span class="form-required">必須</span>
                                 氏名(漢字)
-                            </label><small>※お子様の場合保護者様</small>
+                            </label>
                             <div class="form-name-group">
                                 <div class="form-name-item">
                                     <input type="text" class="form-input" placeholder="姓" required>
@@ -113,65 +147,12 @@
                             </label>
                             <input type="text" class="form-input" placeholder="希望コースをご入力ください">
                         </div>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                <span class="form-required">必須</span>
-                                第1希望日
-                            </label>
-                            <input type="text" class="form-input" placeholder="第1希望日をご入力ください" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                第2希望日
-                            </label>
-                            <input type="text" class="form-input" placeholder="第2希望日をご入力ください">
-                        </div>
                         
                         <div class="form-group">
                             <label class="form-label">
-                                相談内容
+                                その他
                             </label>
-                            <textarea class="form-textarea" placeholder="相談内容をご記入ください"></textarea>
-                        </div>
-
-
-                        <h3 class="form-title">お子様が体験される場合</h3>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                お子様の氏名(漢字)
-                            </label>
-                            <div class="form-name-group">
-                                <div class="form-name-item">
-                                    <input type="text" class="form-input" placeholder="姓">
-                                </div>
-                                <div class="form-name-item">
-                                    <input type="text" class="form-input" placeholder="名">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                お子様の氏名(カナ)
-                            </label>
-                            <div class="form-name-group">
-                                <div class="form-name-item">
-                                    <input type="text" class="form-input" placeholder="セイ">
-                                </div>
-                                <div class="form-name-item">
-                                    <input type="text" class="form-input" placeholder="メイ">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                お子様の生年月日
-                            </label>
-                            <input type="date" class="form-input" placeholder="お子様の生年月日をご入力ください">
+                            <textarea class="form-textarea" placeholder="ご相談内容がありましたら記入ください"></textarea>
                         </div>
                         
                         <div class="form-privacy">
