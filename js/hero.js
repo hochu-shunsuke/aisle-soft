@@ -1,5 +1,7 @@
 function initializeHero() {
   const hero = document.getElementById('hero-section');
+  
+  // ファイルアップロード版の hero.js には !hero のチェックがないため、ここで追加します
   if (!hero) return;
 
   const bgElements = hero.querySelectorAll('.hero__bg');
@@ -12,8 +14,8 @@ function initializeHero() {
   
   // 標準の切り替え間隔を 8000ms (8秒) に設定
   const standardInterval = 8000;
-  // 初回のみ 5000ms (5秒) で切り替える
-  const initialDelay = 5000;
+  // 初回のみ 1000ms (1秒) で切り替える
+  const initialDelay = 1000;
   
   // スライドの表示を更新
   function updateSlide(index) {
@@ -42,12 +44,9 @@ function initializeHero() {
   
   // スライドの自動切り替えを開始する関数
   function startInterval() {
-    // 【初回待機時間短縮のロジック】
-    // 1. setTimeoutを使い、初回のみ短い initialDelay (5秒) 後に advanceNext を実行
+    // 初回待機時間短縮のロジック
     slideInterval = setTimeout(function advanceNext() {
       advanceSlide();
-      
-      // 2. 実行後、standardInterval (8秒) の間隔で advanceNext を繰り返す
       slideInterval = setTimeout(advanceNext, standardInterval);
     }, initialDelay);
   }
