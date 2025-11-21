@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/components/form.css">
     <link rel="stylesheet" href="css/components/button.css">
     <link rel="stylesheet" href="css/components/company.css">
+    <link rel="stylesheet" href="css/components/hero.css">
 </head>
 <body>
     <div class="l-site">
@@ -47,11 +48,36 @@
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        人材募集
+                    </h1>
+                    <p class="hero__subtitle">
+                        アイルソフトではやる気と向上心にあふれた人を募集中です。
+
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="trial.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                </div>
+            </section>
             
             <section class="l-section">
                 <div class="l-section__container">
-
-                    <h1 class="section-title">人材募集</h1>
                     <p class="section-detail">
                         アイルソフトではやる気と向上心にあふれた人を募集中です.一緒に働きませんか？<span class="pc-break"></span>
                         新卒中途は問いません。経験がなくてもやる気があればきっとできます。お待ちしております。<span class="pc-break"></span>
@@ -200,5 +226,6 @@
 
 
     <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/button.css">
     <link rel="stylesheet" href="css/components/company.css">
+    <link rel="stylesheet" href="css/components/hero.css">
 </head>
 <body>
     <div class="l-site">
@@ -46,6 +47,33 @@
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        企業情報
+                    </h1>
+                    <p class="hero__subtitle">
+                        アイルソフトの企業情報をご紹介します。
+
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="trial.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                </div>
+            </section>
             
             <section class="l-section">
                 <div class="l-section__container">
@@ -57,6 +85,11 @@
                             <li class="company-item">
                                 <span class="company-label">会社名</span>
                                 <span class="company-value">株式会社アイルソフト</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">代表取締役</span>
+                                <span class="company-value">市川 満之</span>
                             </li>
                             
                             <li class="company-item">
@@ -77,6 +110,16 @@
                             <li class="company-item">
                                 <span class="company-label">設立年月日</span>
                                 <span class="company-value">2003年5月</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">企業理念</span>
+                                <span class="company-value">創見　共創　共働　共育</span>
+                            </li>
+
+                            <li class="company-item">
+                                <span class="company-label">社是</span>
+                                <span class="company-value">共に学び　共に創り　共に育つ</span>
                             </li>
                             
                             <li class="company-item">
@@ -179,5 +222,6 @@
 
 
     <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
 </body>
 </html>

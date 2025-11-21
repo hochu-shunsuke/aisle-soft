@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/product-card.css">
     <link rel="stylesheet" href="css/components/product.css">
+    <link rel="stylesheet" href="css/components/hero.css">
 </head>
 <body>
     <div class="l-site">
@@ -46,10 +47,30 @@
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
-            <section class="l-section">
-                <div class="l-section__container">
-                    <h2 class="section-title">製品紹介</h2>
-                    <p class="section-detail">弊社では、製造業向け製品、プリザンター、勤怠システムなどの製品をご用意してまいります。</p>
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        製品紹介
+                    </h1>
+                    <p class="hero__subtitle">
+                        弊社では、製造業向け製品、プリザンター、勤怠システムなどの製品をご用意してまいります。
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="trial.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
                 </div>
             </section>
 
@@ -128,5 +149,6 @@
 
 
     <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
 </body>
 </html>
