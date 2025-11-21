@@ -1,18 +1,18 @@
 // 講座カードのトピック開閉機能
 document.addEventListener('DOMContentLoaded', function() {
-  initializeCourseCards();
+  initializeproductCards();
 });
 
-function initializeCourseCards() {
+function initializeproductCards() {
   const topicHeaders = document.querySelectorAll('.topic-card__header');
   
   topicHeaders.forEach(header => {
     header.addEventListener('click', function() {
       const topicCard = this.closest('.topic-card');
       
-      // 他のトピックカードを閉じる（同じcourse-card内の）
-      const courseCard = topicCard.closest('.course-card');
-      const otherTopicCards = courseCard.querySelectorAll('.topic-card');
+      // 他のトピックカードを閉じる（同じproduct-card内の）
+      const productCard = topicCard.closest('.product-card');
+      const otherTopicCards = productCard.querySelectorAll('.topic-card');
       otherTopicCards.forEach(card => {
         if (card !== topicCard) {
           card.classList.remove('is-open');
