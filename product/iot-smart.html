@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/components/button.css">
     <link rel="stylesheet" href="../css/components/image-grid.css">
     <link rel="stylesheet" href="../css/components/feature.css">
+    <link rel="stylesheet" href="../css/components/hero.css">
 </head>
 <body>
     <div class="l-site">
@@ -49,28 +50,46 @@
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('../images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        IoTスマートファクトリー
+                    </h1>
+                    <p class="hero__subtitle">
+                        組込み、制御、ネットワーク技術で<br>インダストリー4.0へ
+
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="../contact.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                </div>
+            </section>
+
             
             <section class="l-section">
                 <div class="l-section__container">
                     <h2 class="section-title">IoTスマートファクトリー</h2>
-
-                    <div class="product-card">
-                        <div class="product-card__image">
-                            <img src="../images/product/iot-smart-factory.png" alt="IoTスマートファクトリー">
-                        </div>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">IoTスマートファクトリー</h3>
-                            <p class="product-card__description">生産管理が曖昧になっていませんか？<br>
-                                異常状態、稼働率、原価率、品質などを目で見て管理できます。<br>
-                                弊社のIoTスマートファクトリーは安価で導入できます。
-                            </p>
-                        </div>
+                    <p class="section-detail">生産管理が曖昧になっていませんか？<br>
+                        異常状態、稼働率、原価率、品質などを目で見て管理できます。<br>
+                        弊社のIoTスマートファクトリーは安価で導入できます。
+                    </p>
+                    <div class="l-section__container" style="display: flex; justify-content: center;">
+                        <img src="../images/product/iot-0.png" alt="AIの活用" style="width: 50%; max-width: 500px; height: auto; display: block; margin-bottom: 20px;">
                     </div>
-                </div>
-            </section>
 
-            <section class="l-section">
-                <div class="l-section__container">
                     <div class="features">
                         <div class="feature-card">
                             <h3 class="feature-card__title">トレーサビリティーシステム</h3>
@@ -86,49 +105,55 @@
                             </p>
                         </div>
                     </div>
+                    <small>※1：Node-REDは、IoTアプリケーション用のビジュアルプログラミングツール</small><br>
+                    <small>※2：Modbus/TCP、EtherNet/IP(TM)、EtherCAT、PROFIBUS、Profinetを使用します</small><br>
+                    <small>※3：機械同士が通信をするためのシンプル、軽量、省電力な通信プロトコル</small>
                 </div>
             </section>
 
             <section class="l-section">
                 <div class="l-section__container">
+                    <h2 class="section-title">製造現場、修理工場のモニタリング（見える化）</h2>
+                    <p class="section-detail">
+                        取得、蓄積したデータからNode-REDのダッシュボードを使い、ランプや数字、グラフなどを表示して、<br>
+                        製造現場のアンドンとして表示することができます。<br>
+                        より簡単にカスタマイズでき、よりリアルタイムに内容を見える化することができます。
+                    </p>
                     <div class="image-grid image-grid--2x1">
                         <div class="image-grid__item">
-                            <img src="../images/product/pc-1.png" alt="画像1" class="image-grid__image">
+                            <img src="../images/product/iot-1.png" alt="画像1" class="image-grid__image">
                         </div>
                         <div class="image-grid__item">
-                            <img src="../images/product/pc-2.png" alt="画像2" class="image-grid__image">
+                            <img src="../images/product/iot-2.png" alt="画像2" class="image-grid__image">
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="l-section">
+                <div class="l-section__container" style="display: flex; justify-content: center;">
+                    <img src="../images/product/iot-3.png" alt="製造現場、修理工場のモニタリング（見える化）" style="width: 70%; max-width: 1600px; height: auto; display: block;">
+                </div>
+            </section>
+
+            <section class="l-section">
                 <div class="l-section__container">
-                    <h2 class="section-subtitle">受講スタイル</h2>
+                    <h2 class="section-title">AIの活用</h2>
                     <p class="section-detail">
-                    パソコン教室では、教室で学習するスタイルになります。<span class="pc-break"></span>
-                    ご都合に合わせて予約ができ、振替授業もできます。
+                        取得、蓄積したデータを利用してAIを活用し、見つかりにくい不良品を未然に防いだり、自動化に役立てたりできます。<br>
+                        AIをエッジコンピューティングに活用し、フィードバック制御を行います。
                     </p>
-                    <div class="product-card">
-                        <div class="product-card__image">
-                            <img src="../images/product/pc-3.jpg" alt="受講スタイル" style="max-height: 300px;">
-                        </div>
-                        <div class="product-card__content">
-                            <span class="product-card__tag">教室授業のメリット</span>
-                            <h3 class="product-card__title">講師や仲間との直接のコミュニケーション!<span class="pc-break"></span>充実した学習体験</h3>
-                            <p class="product-card__description">
-                                パソコン教室では、教室で学習するスタイルになります。教室での学びは、講師や仲間との直接のコミュニケーションが魅力です。質問や意見交換がその場で行えるため、理解が深まりやすく、学びのスピードも向上します。実際の教室環境では、他の生徒と協力し合いながら学ぶことで、モチベーションも自然と高まり、充実した学習体験が得られます。
-                            </p>
-                        </div>
-                    </div>
+                </div>
+                <div class="l-section__container" style="display: flex; justify-content: center;">
+                    <img src="../images/product/iot-4.png" alt="AIの活用" style="width: 50%; max-width: 500px; height: auto; display: block;">
                 </div>
             </section>
 
             <section class="l-section">
                 <div class="l-section__container">
-                    <h2 class="section-subtitle">ぜひ無料体験にご参加ください</h2>
+                    <h2 class="section-subtitle">お問い合わせはこちら</h2>
                     <div class="btn-container">
-                        <a href="../trial.html" class="btn-primary">無料体験実施中</a>
+                        <a href="../contact.html" class="btn-primary">お問い合わせ</a>
                     </div>
                 </div>
             </section>
@@ -160,5 +185,6 @@
 
     <script src="../js/header.js"></script>
     <script src="../js/product-card.js"></script>
+    <script src="../js/hero.js"></script>
 </body>
 </html>
