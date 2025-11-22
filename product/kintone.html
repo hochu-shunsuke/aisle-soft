@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイルソフト</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/product-card.css">
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/image-grid.css">
+    <link rel="stylesheet" href="../css/components/feature.css">
+    <link rel="stylesheet" href="../css/components/hero.css">
+</head>
+<body>
+    <div class="l-site">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo-area">
+                    <a href="../index.html" class="header__logo-link">
+                        <img class="header__logo" src="../images/components/logo.png" alt="アイルソフト ロゴ" />
+                    </a>
+                </div>
+                
+                <nav class="header__nav" aria-label="メインナビゲーション">
+                    <ul class="header__nav-list">
+                        <li><a class="header__nav-link" href="../company.html">企業情報</a></li>
+                        <li><a class="header__nav-link" href="../product.html">製品紹介</a></li>
+                        <li><a class="header__nav-link" href="../trial.html">人材募集</a></li>
+                        <li><a class="header__nav-link" href="../contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button class="header__nav-toggle" aria-label="メニューを開く">
+                    <span class="header__nav-toggle-line"></span>
+                    <span class="header__nav-toggle-line"></span>
+                    <span class="header__nav-toggle-line"></span>
+                </button>
+            </div>
+            <div class="header__nav-menu">
+                <ul class="header__nav-list">
+                    <li><a class="header__nav-link" href="../index.html">トップページ</a></li>
+                    <li><a class="header__nav-link" href="../company.html">企業情報</a></li>
+                    <li><a class="header__nav-link" href="../product.html">製品紹介</a></li>
+                    <li><a class="header__nav-link" href="../trial.html">人材募集</a></li>
+                    <li><a class="header__nav-link" href="../contact.html">お問い合わせ</a></li>
+                </ul>
+                
+            </div>
+            <div class="header__overlay"></div>
+        </header>
+        <main class="l-site__main">
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('../images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        kintoneで業務アプリ制作
+                    </h1>
+                    <p class="hero__subtitle">
+                        kintoneを使って業務アプリを簡単に作成しましょう！
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="../contact.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                </div>
+            </section>
+
+            
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">kintoneで業務アプリ制作</h2>
+                    <p class="section-detail">「kintone」を使えば最短3分で業務アプリの作成が可能です。<br>
+                        sアプリの開発知識がなくても、案件管理、進捗管理、日報管理などのシステムをノンプログラミングで簡単に作成できます。<br>
+                        kintoneにより、社内外で情報を共有化が可能になり、会社を成長させることができます。<br>
+                        <small>※「kintone」は、サイボウズのクラウドサービスです。</small>
+                    </p>
+                    <div class="l-section__container" style="display: flex; justify-content: center;">
+                        <img src="../images/product/kintone-0.png" alt="kintoneで業務アプリ制作" style="width: 70%; max-width: 1600px; height: auto; display: block;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">プリザンター、EC-CUBE、Chatworkとの連携</h2>
+                    <p class="section-detail">
+                        弊社ではkintoneとプリザンター、EC-CUBEとを連携し、最適なソリューションを展開します。<br>
+                        また、Chatworkと連携し、グループチャット、タスク管理、ファイル共有、ビデオ会議で完全なテレワークが可能です。
+                    </p>
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-subtitle">お問い合わせはこちら</h2>
+                    <div class="btn-container">
+                        <a href="../contact.html" class="btn-primary">お問い合わせ</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__logo-area">
+                    <img class="footer__logo" src="../images/components/logo.png" alt="フッターのロゴ" />
+                </div>
+
+                <div class="footer__content">
+                    <div class="footer__copyright">
+                        <p class="footer__copyright-text">
+                            Copyright © 株式会社アイルソフト | AisleSoft inc. All rights Reserved.<span class="pc-break"></span>
+                        </p>
+                    </div>
+
+                    <div class="footer__links">
+                        <a class="footer__link-item" href="../company.html">会社概要</a>
+                        <a class="footer__link-item" href="../privacy-policy.html">プライバシーポリシー</a>
+                        <a class="footer__link-item" href="../site-policy.html">サイトポリシー</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/product-card.js"></script>
+    <script src="../js/hero.js"></script>
+</body>
+</html>
