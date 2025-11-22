@@ -82,6 +82,11 @@ html, body {
   width: 100%;
 }
 
+/* 製品セクションの上のスペースを半分にする（個別対応） */
+#products-section {
+  padding-top: calc(var(--section-vertical) / 2);
+}
+
 .l-section__container {
   width: 100%;
   max-width: var(--site-max-width);
@@ -176,6 +181,11 @@ html, body {
   .l-section {
     padding-top: var(--section-vertical-sm);
     padding-bottom: var(--section-vertical-sm);
+  }
+
+  /* モバイル時の製品セクション上部も半分に調整 */
+  #products-section {
+    padding-top: calc(var(--section-vertical-sm) / 2);
   }
   
   .l-section__container {

@@ -20,6 +20,55 @@
   line-height: 1.4;
 }
 
+/* 企業理念 (2x2) と社是のスタイル */
+.philosophy {
+  max-width: 1000px;
+  margin: 0 auto 32px;
+}
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.philosophy-card {
+  background: transparent;
+  padding: 12px 16px;
+}
+.philosophy-title {
+  color: var(--color-primary, #2860A0);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.philosophy-text {
+  color: var(--color-gray-text, #666);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.creed {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+.creed-image-wrap {
+  max-width: 360px;
+}
+.creed-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+  .creed-image-wrap { max-width: 260px; }
+}
+
 /* 会社情報テーブル */
 .company-info {
   list-style: none;
@@ -127,5 +176,49 @@
   .company-label,
   .company-value {
     font-size: 0.8125rem;
+  }
+}
+
+.company-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 24px; /* column-gap row-gap */
+  align-items: start;
+}
+
+.company-card {
+  /* カード内は既存の company-section スタイルに合わせるため最小限の調整 */
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.company-card .section-subtitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* カードを明示的に配置して、左列に (dev, db)、右列に (lang, plat) を割り当てる */
+.company-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* カード間の縦間隔を小さくする */
+}
+
+.company-col .company-card .company-info { margin: 0; padding: 0; }
+.company-col .company-card .company-item { padding: 6px 0; border-bottom: none; }
+.company-card { display: block; }
+
+/* 右列（言語/プラットフォーム）と左列はそれぞれ独立して積むので、右列の上下間隔が小さくなる */
+@media (max-width: 768px) {
+  .company-cards {
+    grid-template-columns: 1fr; 
+  }
+  /* モバイル時はカラムの順序がそのまま縦並びになる */
+}
+
+@media (max-width: 768px) {
+  .company-cards {
+    grid-template-columns: 1fr; 
   }
 }
