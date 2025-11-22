@@ -1,4 +1,4 @@
-/* header.css: サイト共通ヘッダー用スタイル（改修版） */
+/* header.css: サイト共通ヘッダー用スタイル（PC維持・スマホ浮遊化版） */
 
 :root {
   /* 主要な色を定義 */
@@ -13,6 +13,8 @@
   --color-shadow-menu: rgba(0,0,0,0.15);
   /* ヘッダー用シャドウ（少し強めにして浮遊感を出す） */
   --color-shadow-header: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* スマホ用の影（少し濃いめ） */
+  --header-shadow-mobile: 0 4px 16px rgba(0,0,0,0.15);
 
   /* スペーシングを定義 */
   --spacing-xs: 4px;
@@ -174,22 +176,37 @@
    レスポンシブ: モバイル (999px以下)
    ============================================== */
 @media (max-width: 999px) {
-  /* モバイル時のヘッダー本体: 通常の固定ヘッダーに戻す */
+  /* モバイル時のヘッダー本体: 浮遊させる */
   .header {
-    padding-top: 0; /* 浮かせない */
-    background: var(--color-white); /* 背景白 */
-    box-shadow: 0 2px 8px var(--color-shadow-base); /* 通常の影 */
-    pointer-events: auto; /* 全体をクリック可能に */
+    position: fixed; /* 固定 */
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    /* 【ここを変更】スマホでも上部に隙間を作って浮かせる */
+    padding-top: 16px; 
+    padding-bottom: 0;
+    background: transparent; /* 背景透過 */
+    box-shadow: none; /* 本体には影をつけない */
+    pointer-events: none; /* 透過部分のクリックをスルー */
   }
 
-  /* モバイル時のコンテナ: 角丸解除・全幅 */
+  /* モバイル時のコンテナ: カプセル型デザイン適用 */
   .header__container {
-    width: 100%;
+    pointer-events: auto;
+    
+    /* 【ここを変更】左右に隙間を作って中央に浮かせる */
+    width: calc(100% - 32px); /* 左右16pxずつの余白 */
     max-width: none;
-    border-radius: 0;
-    box-shadow: none; /* 親要素に影をつけるため解除 */
+    margin: 0 auto;
+
+    /* 【ここを変更】角丸と影をつける */
+    border-radius: 24px; 
+    box-shadow: var(--header-shadow-mobile);
+    background: var(--color-white);
+    
     min-height: var(--header-height-mobile);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg); /* パディング調整 */
     justify-content: space-between;
   }
   
@@ -206,8 +223,9 @@
   /* モバイル用のハンバーガーボタンとアクションを表示 */
   .header__nav-toggle {
     display: flex;
-    margin-left: auto;
-    margin-right: var(--spacing-xs);
+    /* margin-left: auto; ← flexレイアウトなので不要な場合が多いが念のため維持 */
+    /* margin-right: var(--spacing-xs); ← カプセル内の余白調整 */
+    margin-right: -4px; /* 右端の微調整 */
     z-index: 1001;
     position: relative;
     padding: 10px;
@@ -215,7 +233,7 @@
     border: none;
     cursor: pointer;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: 5px; /* 線の間隔を調整 */
     align-items: center;
     justify-content: center;
   }
@@ -236,14 +254,16 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: 280px; /* 幅を少し調整 */
     height: 100vh;
-    background: var(--color-white);
+    background: var(--color-gray-menu-bg); /* 色変数を適用 */
     box-shadow: -4px 0 20px var(--color-shadow-menu);
     z-index: 1000;
     transition: right 0.3s ease;
     overflow-y: auto;
-    padding-top: 80px;
+    
+    /* 【ここを変更】ヘッダーが浮いている分、メニューの上部余白を増やす */
+    padding-top: 90px; 
   }
   
   .header__overlay {
@@ -301,10 +321,11 @@
 
   /* ハンバーガーアニメーション */
   .header__nav-toggle-line {
-    width: 24px;
-    height: 3px;
+    width: 22px; /* 線の長さを少し調整 */
+    height: 2px; /* 線の太さを調整 */
     background: var(--color-black);
     transition: all 0.3s ease;
+    border-radius: 2px;
   }
 
   .header__nav-toggle.is-open .header__nav-toggle-line:nth-child(1) {
@@ -316,35 +337,36 @@
   }
 
   .header__nav-toggle.is-open .header__nav-toggle-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(5px, -5px); /* 位置調整 */
   }
 }
 
 /* Extra small devices optimization */
 @media (max-width: 480px) {
+  .header {
+    /* スマホ小画面での浮き具合を微調整 */
+    padding-top: 12px; 
+  }
+
   .header__container {
-    padding: var(--spacing-sm) var(--spacing-md);
+    /* 左右の余白を維持しつつパディング調整 */
+    width: calc(100% - 24px); 
+    padding: 0 16px;
     min-height: 56px;
   }
 
   .header__logo {
-    height: 36px;
+    height: 30px; /* 少し小さく */
   }
 
   .header__nav-toggle {
     padding: var(--spacing-sm);
-    margin-right: 2px;
-  }
-
-  .header__nav-toggle-line {
-    width: 20px;
-    height: 2px;
+    margin-right: -4px;
   }
 
   .header__nav-menu {
-    width: calc(100vw - 40px);
-    max-width: 280px;
-    padding-top: 70px;
+    width: 280px;
+    padding-top: 80px;
   }
 
   .header__nav-link {
@@ -362,12 +384,13 @@
     padding: var(--spacing-lg) 18px;
     gap: var(--spacing-md);
   }
-
+  
+  /* ハンバーガーのアニメーション位置微調整（必要であれば） */
   .header__nav-toggle.is-open .header__nav-toggle-line:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
   }
 
   .header__nav-toggle.is-open .header__nav-toggle-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(4px, -4px);
   }
 }
