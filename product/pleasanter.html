@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイルソフト</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/product-card.css">
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/image-grid.css">
+    <link rel="stylesheet" href="../css/components/feature.css">
+    <link rel="stylesheet" href="../css/components/hero.css">
+</head>
+<body>
+    <div class="l-site">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo-area">
+                    <a href="../index.html" class="header__logo-link">
+                        <img class="header__logo" src="../images/components/logo.png" alt="アイルソフト ロゴ" />
+                    </a>
+                </div>
+                
+                <nav class="header__nav" aria-label="メインナビゲーション">
+                    <ul class="header__nav-list">
+                        <li><a class="header__nav-link" href="../company.html">企業情報</a></li>
+                        <li><a class="header__nav-link" href="../product.html">製品紹介</a></li>
+                        <li><a class="header__nav-link" href="../trial.html">人材募集</a></li>
+                        <li><a class="header__nav-link" href="../contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button class="header__nav-toggle" aria-label="メニューを開く">
+                    <span class="header__nav-toggle-line"></span>
+                    <span class="header__nav-toggle-line"></span>
+                    <span class="header__nav-toggle-line"></span>
+                </button>
+            </div>
+            <div class="header__nav-menu">
+                <ul class="header__nav-list">
+                    <li><a class="header__nav-link" href="../index.html">トップページ</a></li>
+                    <li><a class="header__nav-link" href="../company.html">企業情報</a></li>
+                    <li><a class="header__nav-link" href="../product.html">製品紹介</a></li>
+                    <li><a class="header__nav-link" href="../trial.html">人材募集</a></li>
+                    <li><a class="header__nav-link" href="../contact.html">お問い合わせ</a></li>
+                </ul>
+                
+            </div>
+            <div class="header__overlay"></div>
+        </header>
+        <main class="l-site__main">
+            <!-- ヒーローセクション -->
+            <section class="hero" id="hero-section">
+                <div class="hero__bg active" style="background-image: url('../images/index/index-hero-1.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-2.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-3.png');"></div>
+                <div class="hero__bg" style="background-image: url('../images/index/index-hero-4.png');"></div>
+
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        プリザンター
+                    </h1>
+                    <p class="hero__subtitle">
+                        新規開発の約1/3の工数で独自の業務アプリが作成可能！
+                    </p>
+                    <div class="hero__btn-area">
+                        <a href="../contact.html" class="hero__btn">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <div class="hero__indicators">
+                    <div class="hero__indicator active"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                    <div class="hero__indicator"></div>
+                </div>
+            </section>
+
+            
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">プリザンター</h2>
+                    <p class="section-detail">生産管理が曖昧になっていませんか？<br>
+                        異常状態、稼働率、原価率、品質などを目で見て管理できます。<br>
+                        弊社のIoTスマートファクトリーは安価で導入できます。
+                    </p>
+                    <div class="l-section__container" style="display: flex; justify-content: center;">
+                        <img src="../images/product/pleasanter-1.png" alt="プリザンター" style="width: 50%; max-width: 500px; height: auto; display: block; margin-bottom: 20px;">
+                    </div>
+
+                    <div class="features">
+                        <div class="feature-card">
+                            <h3 class="feature-card__title">日常的に使える</h3>
+                            <ul class="feature-card__description">
+                                <li>Webアプリと思えないほど、サクサク動く</li>
+                                <li>豊富なカスタマイズ</li>
+                                <li>ドラッグ＆ドロップでできる</li>
+                                <li>表示できる種類が豊富</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h3 class="feature-card__title">様々な業務に利用可能</h3>
+                            <p class="feature-card__description">
+                                顧客管理 / 営業支援 / プロジェクト管理 / 問合せ管理 / インシデント管理/ ナレッジ管理
+                            </p>
+                        </div>
+                    </div>
+                    <p class="section-subtitle">弊社ではプリザンターの導入設定、マニュアル作成、導入研修、保守、カスタマイズをいたします。</h2>
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">テレワークにプリザンターをご活用ください</h2>
+                    <p class="section-detail">
+                        「業務の機密情報を持ち帰るようになってしまった」<br>
+                        「短い期間でのテレワークにより業務に支障をきたしている」<br>
+                        「一部の人だけがテレワークとなってしまっている」<br>
+                        そのような企業様へプリザンターが活用できます。<br>
+                        プリザンターならテレワークでもチーム連携が円滑に！！
+                    </p>
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">Chatworkとの連携</h2>
+                    <p class="section-detail">
+                        Charworkと連携し、グループチャット、タスク管理、ファイル共有、ビデオ会議でより完全なテレワークが可能です。
+                    </p>
+                </div>
+                <div class="l-section__container" style="display: flex; justify-content: center;">
+                    <img src="../images/product/pleasanter-2.png" alt="テレワークにプリザンターをご活用ください" style="width: 70%; max-width: 1600px; height: auto; display: block;">
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">スマホ・タブレット・その他プラットフォーム同時対応</h2>
+                    <p class="section-detail">
+                        スマホ・タブレット・その他プラットフォーム用のFlutter2で開発したアプリとプリザンターを連携。
+                    </p>
+                </div>
+                <div class="l-section__container" style="display: flex; justify-content: center;">
+                    <img src="../images/product/pleasanter-3.png" alt="スマホ・タブレット・その他プラットフォーム同時対応" style="width: 70%; max-width: 1600px; height: auto; display: block;">
+                </div>
+                <div class="l-section__container" style="display: flex; justify-content: center;">
+                    <img src="../images/product/pleasanter-4.png" alt="スマホ・タブレット・その他プラットフォーム同時対応" style="width: 70%; max-width: 1600px; height: auto; display: block;">
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-title">IoTにもプリザンターをご活用ください</h2>
+                    <p class="section-detail">
+                        センサから取得したデータの見える化。
+                    </p>
+                    <div class="btn-container">
+                        <a href="iot-smart.html" class="btn-primary">スマートファクトリへの移行</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="l-section">
+                <div class="l-section__container">
+                    <h2 class="section-subtitle">お問い合わせはこちら</h2>
+                    <div class="btn-container">
+                        <a href="../contact.html" class="btn-primary">お問い合わせ</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__logo-area">
+                    <img class="footer__logo" src="../images/components/logo.png" alt="フッターのロゴ" />
+                </div>
+
+                <div class="footer__content">
+                    <div class="footer__copyright">
+                        <p class="footer__copyright-text">
+                            Copyright © 株式会社アイルソフト | AisleSoft inc. All rights Reserved.<span class="pc-break"></span>
+                        </p>
+                    </div>
+
+                    <div class="footer__links">
+                        <a class="footer__link-item" href="../company.html">会社概要</a>
+                        <a class="footer__link-item" href="../privacy-policy.html">プライバシーポリシー</a>
+                        <a class="footer__link-item" href="../site-policy.html">サイトポリシー</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/product-card.js"></script>
+    <script src="../js/hero.js"></script>
+</body>
+</html>
