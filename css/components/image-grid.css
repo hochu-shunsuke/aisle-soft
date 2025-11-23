@@ -1,105 +1,112 @@
-/* 画像配置システム */
+/* image-grid.css: 画像グリッドシステム（最適化版） */
+
+:root {
+  /* グリッド用変数定義 */
+  --grid-gap: 24px;
+  --grid-gap-sm: 16px;
+  --grid-radius: 12px;
+  
+  /* 画像の高さ設定 */
+  --img-height-pc: 240px;
+  --img-height-tab: 200px;
+  --img-height-sp: 180px;
+}
+
+/* ==============================================
+   グリッドコンテナ (Flexbox化)
+   ============================================== */
 .image-grid {
-  display: grid;
-  gap: var(--spacing-lg, 24px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 【重要】最後の行を中央寄せにする */
+  gap: var(--grid-gap);
   width: 100%;
 }
 
-/* 基本配置パターン */
-.image-grid--2x1 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.image-grid--2x2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.image-grid--3x2 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* 画像アイテム */
+/* ==============================================
+   画像アイテム (カード)
+   ============================================== */
 .image-grid__item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--color-shadow-base, rgba(0, 0, 0, 0.1));
+  border-radius: var(--grid-radius);
+  background: #fff; /* containで余白が出ても綺麗に見えるよう白背景 */
+  box-shadow: 0 4px 12px var(--color-shadow-base, rgba(0, 0, 0, 0.08));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Flexアイテムの基本設定 */
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
+/* ホバーエフェクト */
 .image-grid__item:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px var(--color-shadow-primary, rgba(40, 96, 160, 0.15));
 }
 
+/* 画像本体 */
 .image-grid__image {
   width: 100%;
-  /* 【修正】デフォルトの高さを280pxから240pxに縮小しました */
-  height: 240px; 
-  object-fit: contain;
+  height: var(--img-height-pc);
+  object-fit: contain; /* 画像全体を表示 */
   display: block;
+  transition: transform 0.3s ease;
 }
 
-/* サイズバリエーション */
-.image-grid--small .image-grid__image {
-  height: 180px; 
+/* ==============================================
+   列数バリエーション (PC用デフォルト)
+   ============================================== */
+
+/* 3列レイアウト (標準) */
+/* 計算式: (100% - (ギャップ * (列数 - 1))) / 列数 */
+.image-grid--col-3 .image-grid__item {
+  width: calc((100% - (var(--grid-gap) * 2)) / 3);
 }
 
-.image-grid--large .image-grid__image {
-  height: 300px;
+/* 2列レイアウト */
+.image-grid--col-2 .image-grid__item {
+  width: calc((100% - var(--grid-gap)) / 2);
 }
 
-/* タブレット対応 (1024px以下) */
+/* 4列レイアウト (必要であれば使用) */
+.image-grid--col-4 .image-grid__item {
+  width: calc((100% - (var(--grid-gap) * 3)) / 4);
+}
+
+/* ==============================================
+   レスポンシブ対応
+   ============================================== */
+
+/* タブレット (1024px以下) */
 @media (max-width: 1024px) {
   .image-grid {
-    gap: var(--spacing-md, 16px);
+    gap: var(--grid-gap-sm);
   }
-  
+
   .image-grid__image {
-    /* 【修正】タブレットでの高さを240pxから200pxに縮小しました */
-    height: 200px;
+    height: var(--img-height-tab);
   }
-  
-  .image-grid--small .image-grid__image {
-    height: 160px;
-  }
-  
-  .image-grid--large .image-grid__image {
-    height: 260px;
+
+  /* タブレットでは3列→2列に変更 */
+  .image-grid--col-3 .image-grid__item,
+  .image-grid--col-4 .image-grid__item {
+    width: calc((100% - var(--grid-gap-sm)) / 2);
   }
 }
 
-/* スマホ対応 (768px以下) */
-@media (max-width: 768px) {
-  .image-grid--2x1,
-  .image-grid--2x2,
-  .image-grid--3x2 {
-    /* 2列表示を維持 */
-    grid-template-columns: repeat(2, 1fr); 
-  }
-  
+/* スマホ (600px以下) */
+@media (max-width: 600px) {
   .image-grid__image {
-    /* 【追加】スマホでの高さをさらに縮小 */
-    height: 140px;
+    height: var(--img-height-sp);
   }
-  
-  .image-grid--small .image-grid__image {
-    height: 120px;
-  }
-  
-  .image-grid--large .image-grid__image {
-    height: 180px;
-  }
-}
 
-/* スマホ対応（480px以下で1列にする場合の想定） */
-@media (max-width: 480px) {
-  .image-grid--2x1,
-  .image-grid--2x2,
-  .image-grid--3x2 {
-    grid-template-columns: 1fr;
-  }
-  .image-grid__image {
-    height: 180px;
+  /* スマホではすべて1列にする */
+  .image-grid--col-3 .image-grid__item,
+  .image-grid--col-2 .image-grid__item,
+  .image-grid--col-4 .image-grid__item {
+    width: 100%;
+    max-width: 400px; /* 横に伸びすぎないように制限 */
   }
 }
