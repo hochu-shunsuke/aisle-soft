@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アイルソフト</title>
+    <title>お問い合わせ | アイルソフト</title>
+    <meta name="description" content="株式会社アイルソフトへのお問い合わせはこちら。ソフトウェア開発、IoTソリューション、受託開発などのご相談を承ります。">
+    <meta name="keywords" content="お問い合わせ,アイルソフト,ソフトウェア開発,見積もり,相談">
+    <!-- OGP -->
+    <meta property="og:title" content="お問い合わせ | アイルソフト">
+    <meta property="og:description" content="アイルソフトへのお問い合わせはこちら。ソフトウェア開発のご相談を承ります。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aisle-soft.co.jp/contact.html">
+    <meta property="og:image" content="https://www.aisle-soft.co.jp/images/ogp.png">
+    <meta property="og:site_name" content="アイルソフト">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
@@ -11,6 +25,7 @@
     <link rel="stylesheet" href="css/components/button.css">
     <link rel="stylesheet" href="css/components/hero.css">
 </head>
+
 <body>
     <div class="l-site">
         <header class="header">
@@ -20,7 +35,7 @@
                         <img class="header__logo" src="images/logo.png" alt="アイルソフト ロゴ" />
                     </a>
                 </div>
-                
+
                 <nav class="header__nav" aria-label="メインナビゲーション">
                     <ul class="header__nav-list">
                         <li><a class="header__nav-link" href="company.html">企業情報</a></li>
@@ -35,13 +50,15 @@
                     <span class="header__nav-toggle-line"></span>
                 </button>
             </div>
-            <div class="header__nav-menu">
-                <li><a class="header__nav-link" href="index.html">トップページ</a></li>
-                <li><a class="header__nav-link" href="company.html">企業情報</a></li>
-                <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
-                <li><a class="header__nav-link" href="recruitment.html">人材募集</a></li>
-                <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
-            </div>
+            <nav class="header__nav-menu" aria-label="モバイルナビゲーション">
+                <ul class="header__nav-menu-list">
+                    <li><a class="header__nav-link" href="index.html">トップページ</a></li>
+                    <li><a class="header__nav-link" href="company.html">企業情報</a></li>
+                    <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
+                    <li><a class="header__nav-link" href="recruitment.html">人材募集</a></li>
+                    <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
@@ -49,15 +66,14 @@
                 <div class="l-section__container">
 
                     <h2 class="section-title">お問い合わせについて</h2>
-                    <p class="il">
+                    <p class="section-detail">
                         ご質問やご不明点がございましたら、こちらのお問い合わせフォームからお気軽にご連絡ください。<span class="pc-break"></span>
-                        弊社のサービスや採用に関するご相談がございましたら、<span class="pc-break"></span>
-                        こちらのお問い合わせフォームからお気軽にご連絡ください。
+                        弊社のサービスや採用に関するご相談がございましたら、こちらのお問い合わせフォームからお気軽にご連絡ください。
                     </p>
 
                     <form class="form-section">
                         <h3 class="form-title">お問い合わせフォーム</h3>
-                        
+
                         <div class="form-group">
                             <label class="form-label">
                                 <span class="form-required">必須</span>
@@ -105,25 +121,26 @@
 
                             <input type="email" class="form-input" placeholder="確認用" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">
                                 お問い合わせ内容
                             </label>
                             <textarea class="form-textarea" placeholder="お問い合わせ内容をご記入ください"></textarea>
                         </div>
-                        
+
                         <div class="form-privacy">
                             <p class="form-privacy-text">
-                                <a href="privacy-policy.html" class="form-privacy-link"><strong>プライバシーポリシー</strong></a>をご確認のうえ、送信をお願いいたします。
+                                <a href="privacy-policy.html"
+                                    class="form-privacy-link"><strong>プライバシーポリシー</strong></a>をご確認のうえ、送信をお願いいたします。
                             </p>
-                            
+
                             <div class="form-consent">
                                 <input type="checkbox" id="consent" class="form-checkbox" required>
                                 <label for="consent" class="form-consent-label">上記に同意する</label>
                             </div>
                         </div>
-                        
+
                         <!-- 送信ボタン -->
                         <div class="btn-container">
                             <button type="submit" class="btn-primary">送信</button>
@@ -160,4 +177,5 @@
     <script src="js/header.js"></script>
     <script src="js/hero.js"></script>
 </body>
+
 </html>

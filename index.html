@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アイルソフト</title>
+    <title>アイルソフト | IoTソリューション・ソフトウェア開発</title>
+    <meta name="description" content="株式会社アイルソフトは、IoTスマートファクトリー、組込み・制御システム、ネットワーク技術で製造業のインダストリー4.0を支援するソフトウェア開発会社です。">
+    <meta name="keywords" content="IoT,スマートファクトリー,組込みソフトウェア,制御システム,ネットワーク,名古屋,ソフトウェア開発">
+    <meta name="author" content="株式会社アイルソフト">
+    <!-- OGP -->
+    <meta property="og:title" content="アイルソフト | IoTソリューション・ソフトウェア開発">
+    <meta property="og:description" content="IoTスマートファクトリー、組込み・制御システムで製造業のDXを支援します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aisle-soft.co.jp/">
+    <meta property="og:image" content="https://www.aisle-soft.co.jp/images/ogp.png">
+    <meta property="og:site_name" content="アイルソフト">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="アイルソフト | IoTソリューション・ソフトウェア開発">
+    <meta name="twitter:description" content="IoTスマートファクトリー、組込み・制御システムで製造業のDXを支援します。">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
@@ -38,13 +57,15 @@
                     <span class="header__nav-toggle-line"></span>
                 </button>
             </div>
-            <div class="header__nav-menu">
-                <li><a class="header__nav-link" href="index.html">トップページ</a></li>
-                <li><a class="header__nav-link" href="company.html">企業情報</a></li>
-                <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
-                <li><a class="header__nav-link" href="recruitment.html">人材募集</a></li>
-                <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
-            </div>
+            <nav class="header__nav-menu" aria-label="モバイルナビゲーション">
+                <ul class="header__nav-menu-list">
+                    <li><a class="header__nav-link" href="index.html">トップページ</a></li>
+                    <li><a class="header__nav-link" href="company.html">企業情報</a></li>
+                    <li><a class="header__nav-link" href="product.html">製品紹介</a></li>
+                    <li><a class="header__nav-link" href="recruitment.html">人材募集</a></li>
+                    <li><a class="header__nav-link" href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
             <div class="header__overlay"></div>
         </header>
         <main class="l-site__main">
@@ -115,8 +136,10 @@
             <section class="l-section">
                 <div class="l-section__container">
                     <h2 class="section-title">受託開発</h2>
-                    組み込み、制御、ネットワーク、MS-Windowsシステム、Mac、Webシステム、スマートフォンアプリなどの受託開発を行っております。 従来のシステム～IoT、ロボット、AIまで承ります。
-
+                    <p class="contract-lead">
+                        組み込み、制御、ネットワーク、MS-Windows、Mac、Webシステム、スマートフォンアプリなど<br>
+                        幅広い分野の受託開発を行っております。従来のシステムからIoT、ロボット、AIまで承ります。
+                    </p>
 
                     <div class="contract-section">
                         <div class="contract-cards">
@@ -203,12 +226,16 @@
                     <div class="news-card">
                         <div class="news-card__content">
                             <div class="news-item">
-                                <div class="news-item__date">20xx.xx.xx</div>
-                                <div class="news-item__content">xxxxxxxxxxxxxxx</div>
+                                <div class="news-item__date">2024.12.01</div>
+                                <div class="news-item__content">年末年始休業のお知らせ（12/28〜1/5）</div>
                             </div>
                             <div class="news-item">
-                                <div class="news-item__date">20xx.xx.xx</div>
-                                <div class="news-item__content">xxxxxxxxxxxxxxx</div>
+                                <div class="news-item__date">2024.10.15</div>
+                                <div class="news-item__content">IoTスマートファクトリーの新機能をリリースしました</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-item__date">2024.08.20</div>
+                                <div class="news-item__content">夏季休業のお知らせ</div>
                             </div>
                         </div>
                     </div>

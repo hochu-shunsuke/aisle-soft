@@ -252,7 +252,8 @@
     visibility: visible;
   }
 
-  /* (以下、メニュー内部のスタイルは変更なし) */
+  /* モバイルメニュー内部のリストスタイル */
+  .header__nav-menu-list,
   .header__nav-list {
     display: flex;
     flex-direction: column;
